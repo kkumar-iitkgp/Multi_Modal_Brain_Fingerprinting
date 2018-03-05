@@ -3,7 +3,7 @@
 The code in this repository reproduces most of the analysis reported in "Multi-modal brain fingerprinting: a manifold approximation based framework".
 
 __________________________________________________________________
-#Following analysis can be performed:
+##Following analysis can be performed:
                 
         1. Comapct fingerprint generation using Laplacian Eigenmaps based embedding.
         
@@ -19,7 +19,7 @@ __________________________________________________________________
         (randomized) have been included in data folder for illustration
         purposes. 
 __________________________________________________________________
-#Pre-processing Steps Summary:
+##Pre-processing Steps Summary:
 
         (* REQUIREMENTS for complete analysis, starting from NiFTI volume files*)
         
@@ -37,8 +37,7 @@ __________________________________________________________________
         
         
 __________________________________________________________________
-%
-#Brief Overview of Bag of Feature (BoF) pre-processing:
+##Brief Overview of Bag of Feature (BoF) pre-processing:
 
         1. We assume that Bag-of-features (BoF) have been generated and 
            approximate matching has been performed using 
@@ -62,8 +61,7 @@ __________________________________________________________________
           and the sibling/twin pair IDs
 
 __________________________________________________________________
-%
- #ADDITIONAL processing/files:
+ ##ADDITIONAL processing/files:
  
          1. Pairwise feature match visualization requires 3D SIFT feature files.
          (not included here)
@@ -78,12 +76,11 @@ __________________________________________________________________
 
 
 __________________________________________________________________
-%
-#Reference: 
+##Reference: 
 
           Multi-modal brain fingerprinting: a manifold approximation based framework
           
-#Authors: 
+##Authors: 
 
          Kuldeep Kumar (kkumar@livia.etsmtl.ca), 
          
@@ -95,6 +92,6 @@ __________________________________________________________________
          
          Christian Desrosiers (christian.desrosiers@etsmtl.ca)
     
-#LIVIA, ETS Montreal, Canada
+##LIVIA, ETS Montreal, Canada
 
-#January 2018
+##January 2018
