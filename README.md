@@ -1,9 +1,9 @@
-# Multi_Modal_Brain_Fingerprinting
+## Multi_Modal_Brain_Fingerprinting
 
 The code in this repository reproduces most of the analysis reported in "Multi-modal brain fingerprinting: a manifold approximation based framework".
 
 __________________________________________________________________
-Following analysis can be performed:
+#Following analysis can be performed:
                 
         1. Comapct fingerprint generation using Laplacian Eigenmaps based embedding.
         
@@ -19,8 +19,9 @@ Following analysis can be performed:
         (randomized) have been included in data folder for illustration
         purposes. 
 __________________________________________________________________
-Preprocessing Steps Summary:
-        * REQUIREMENTS for complete analysis, starting from NiFTI volume files*: 
+#Pre-processing Steps Summary:
+
+        (* REQUIREMENTS for complete analysis, starting from NiFTI volume files*)
         
         1. Obtain Bag of feature (BoF) files for each image for a given modality.
         
@@ -37,7 +38,7 @@ Preprocessing Steps Summary:
         
 __________________________________________________________________
 %
-Brief Overview of Bag of Feature (BoF) pre-processing:
+#Brief Overview of Bag of Feature (BoF) pre-processing:
 
         1. We assume that Bag-of-features (BoF) have been generated and 
            approximate matching has been performed using 
@@ -62,7 +63,7 @@ Brief Overview of Bag of Feature (BoF) pre-processing:
 
 __________________________________________________________________
 %
- ADDITIONAL processing/files:
+ #ADDITIONAL processing/files:
  
          1. Pairwise feature match visualization requires 3D SIFT feature files.
          (not included here)
@@ -78,11 +79,11 @@ __________________________________________________________________
 
 __________________________________________________________________
 %
-Reference: 
+#Reference: 
 
           Multi-modal brain fingerprinting: a manifold approximation based framework
           
-Authors: 
+#Authors: 
 
          Kuldeep Kumar (kkumar@livia.etsmtl.ca), 
          
@@ -94,6 +95,6 @@ Authors:
          
          Christian Desrosiers (christian.desrosiers@etsmtl.ca)
     
-LIVIA, ETS Montreal, Canada
+#LIVIA, ETS Montreal, Canada
 
-January 2018
+#January 2018
