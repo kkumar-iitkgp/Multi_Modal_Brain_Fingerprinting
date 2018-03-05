@@ -1,0 +1,15 @@
+
+We have included 
+
+1. Sample report.txt files (output of featMatchMultiple.exe, feature correspondences) for T1w, FA, T2w (all at 1.25mm resolution)
+
+2. Sample Pairwise Pearson Correlation between rfMRI based fingerprints (Netmats, partial corr - ICA 100, obtained from HCP1200 release). This is similar to Finn. et al. (Nature Neuroscience, 2015) based functional connectome fingerprinting.
+
+3. Sample twin/sibling pair ids. 
+   We have: i. cell array row 1: 119 MZ twin pairs;
+            ii. cell array row 2: 63 DZ twin pairs;
+            iii. cell array row 3:546 full sibling (FS) pairs;
+            iv. cell array row 4: 39 maternal half sibling (MHS) pairs
+            v. i. cell array row 1: 5 paternal half sibling (PHS) pairs
+            
+   NOTE: The ids are randomized, as such does not correspond directly to HCP subject list. 
