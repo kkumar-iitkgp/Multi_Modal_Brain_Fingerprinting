@@ -68,11 +68,17 @@ Reference:
           Multi-modal brain fingerprinting: a manifold approximation based framework
           
 Authors: 
+
          Kuldeep Kumar (kkumar@livia.etsmtl.ca), 
-         Laurent Chauvin
-         Matthew Toews (Matthew.Toews@etsmtl.ca) 
-         Olivier Colliot and 
+         
+         Laurent Chauvin,
+         
+         Matthew Toews (Matthew.Toews@etsmtl.ca),
+         
+         Olivier Colliot, and 
+         
          Christian Desrosiers (christian.desrosiers@etsmtl.ca)
     
 LIVIA, ETS Montreal, Canada
+
 January 2018
