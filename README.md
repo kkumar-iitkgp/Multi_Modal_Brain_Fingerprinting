@@ -11,7 +11,7 @@ __________________________________________________________________
         
         3. Rank reterival analysis for twin/sibling types using randomized subject IDs and sample subject proximity graphs. Following measures can be generated: mean average precision (MAP), mean recall@10.
         
-        4. Illustration for T1w, FA, T1w+FA, T1w+rfMRI, FA+rfMRI, and T1w+T2w+FA+rfMRI based fingerprints.
+        4. Illustration for T1w, FA, T1w+FA, T1w+rfMRI, FA+rfMRI, and T1w+T2w+FA+rfMRI based fingerprints. (Included sample data for T1w, T2w, FA are at 1.25mm resolution).
         
         5. Relative informativeness of modality: a modality vs modality comparison for the task of twin/sibling identification.
 
