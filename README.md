@@ -84,11 +84,11 @@ __________________________________________________________________
 
          Kuldeep Kumar (kkumar@livia.etsmtl.ca), 
          
-         Laurent Chauvin,
+         Laurent Chauvin (laurent.chauvin.2@ens.etsmtl.ca),
          
          Matthew Toews (Matthew.Toews@etsmtl.ca),
          
-         Olivier Colliot, and 
+         Olivier Colliot (olivier.colliot@upmc.fr), and 
          
          Christian Desrosiers (christian.desrosiers@etsmtl.ca)
     
