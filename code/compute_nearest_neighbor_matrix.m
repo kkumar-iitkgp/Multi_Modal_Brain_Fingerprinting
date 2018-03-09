@@ -52,7 +52,7 @@ end
 % if the first element correspond to diagonal indices
 if(isempty(find(temp_sort_index_set(:,1)-(1:temp_max_knn_value)', 1)))
     start_index = 2;
-     end_index = knn_value+1 ;
+    end_index = knn_value+1 ;
 else
      start_index = 1;
      end_index = knn_value ;

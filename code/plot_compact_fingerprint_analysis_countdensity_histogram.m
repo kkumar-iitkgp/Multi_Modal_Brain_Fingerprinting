@@ -1,21 +1,20 @@
-function plot_compact_fingerprint_analysis(data_mat,x_tick_array,figure_title,cell_legend,leg_location,cell_label,save_plot_name)
+function plot_compact_fingerprint_analysis_countdensity_histogram(cell_data,modality,save_plot_name)
 
 
 %%
 % Summary:
-%         1. MATLAB script to generate d-prime/p-val vs num of eig vecs
-%            plot for compact fingerprint analysis
+%         1. MATLAB script to compare compact fingerprints for twin/sibling
+%         types for a given modality
+%         2. Plot count density histogram for Euclidean distance between twin/sibling pair compact fingerprints.
 %
 %%
 % Function Parameters:
 %         Input:
-%               1. data_mat: each row contains mean recall@k data 
-%               2. num_eig_vec_array: array for num_eig_vecs for compact
-%               fingerprint
-%               3. cell_legend: legend array
-%               4. leg_location: legend location parameter
-%               5. cell_label: labels for x-axis and y-axis respectively
-%               6. save_plot_name: filename (with path) for saving the
+%               1. cell_mat: data cell containing pairwise Euclidean
+%               distance between compact fingerprint pairs for MZ, DZ and
+%               FS
+%               2. modality: name of the modality
+%               3. save_plot_name: filename (with path) for saving the
 %               plot, if empty: plot won't be saved
 %         Output:
 %               1. Plot displayed and saved (if filename is not empty)
@@ -55,31 +54,39 @@ function plot_compact_fingerprint_analysis(data_mat,x_tick_array,figure_title,ce
     marker_option{6} = '^' ;
     marker_option{7} = '+' ;
 
-%%
-    Num_curves = size(data_mat,2);
-
+    % histfit
     h_fig = figure; 
-    title(figure_title);
     
-    hold on;
-    for loop_curve = 1:Num_curves         
-        plot(data_mat(:,loop_curve),strcat('-',color_option{loop_curve}),'LineWidth',Line_width);
-    end
-    hold off; 
-    box on;
-    
-       
-    set(gca,'XTickLabel',num2cell(x_tick_array),'FontSize',26);
-          
-    xlabel(cell_label{1},'FontSize',gca_FontSize);
-    ylabel(cell_label{2},'FontSize',gca_FontSize);
-     
-    leg_1 = legend(cell_legend,'Location',leg_location);
-    set(leg_1,'FontSize',leg_FontSize);
+    n_bins = 100 ;
+    var_dist = 'gamma';
 
- 
+    % FS
+    hn1 = histfit(cell_data{3,1}(:),80,var_dist);
+    hn1(1).FaceColor= 'b';
+    hn1(2).Color='b' ;
+
+    hold on
+    % DZ
+    hn2 = histfit(cell_data{2,1}(:),20,var_dist);
+    hn2(1).FaceColor= 'g';
+    hn2(2).Color='g' ;
+
+    %MZ
+    hn3 = histfit(cell_data{1,1}(:),40,var_dist);
+    hn3(1).FaceColor= 'r';
+    hn3(2).Color='r' ;
+    
+    hold off;
+    
+    %xlim([4 17]);
+    %ylim([0 80]);
+    legend([hn1(2) hn2(2) hn3(2)],'FS','DZ','MZ','location','northwest');
     set(gca,'FontSize',gca_FontSize);
-
+    ylabel('Countdensity','FontSize',32);
+    xlabel('Euclidean Dist','FontSize',32);
+    
+    title(['Countdensity plot: ' modality{1}]);
+    
     set(h_fig,'Position',[50,50,1000,625]);
 
     if(~isempty(save_plot_name))
@@ -87,5 +94,4 @@ function plot_compact_fingerprint_analysis(data_mat,x_tick_array,figure_title,ce
         print(h_fig,save_plot_name,'-dpdf',['-r',num2str(req_rez)],'-opengl');
     end
 
-
-end
+end       

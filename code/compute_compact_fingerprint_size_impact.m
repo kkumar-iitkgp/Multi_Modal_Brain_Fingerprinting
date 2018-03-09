@@ -53,12 +53,13 @@ W_mat_norm = (W_mat_norm + W_mat_norm')/2 ;
 temp_d = diag(D_inv_sqrt_mat);
 temp_Sqrt_Djj_mat = repmat(temp_d,1,size(W_mat,2));
 
+Temp_spect_embed_full = temp_Sqrt_Djj_mat(:,2:end).*U(:,2:end);
 
 cell_compact_fingerprint =  cell(length(array_num_spect_component),1);
 
 for loop_i = 1:length(array_num_spect_component)
     % each component is normalized by the inverse of sqrt of row sum
-    Temp_embed_mat = temp_Sqrt_Djj_mat(:,2:(array_num_spect_component(loop_i)+1)).*U(:,2:(array_num_spect_component(loop_i)+1));
+    Temp_embed_mat = Temp_spect_embed_full(:,1:array_num_spect_component(loop_i));
     Z_test = (zscore(Temp_embed_mat'))';
     
     % compact fingerprints (Nsub x num_spect_component)

@@ -60,10 +60,10 @@ idfn_task_recall_array_2 = zeros(num_idfn_tasks,1);
 % here we assume over all knn_value
 % but it can be modified to consider the order also
 for i=1:num_idfn_tasks
-    if(~isempty(find(nearest_neighbor_matrix_mod1(i,:) == pair_id_set(i),1)))
+    if(~isempty(find(nearest_neighbor_matrix_mod1(sub_id_set(i),:) == pair_id_set(i),1)))
         idfn_task_recall_array_1(i) = 1;
     end
-    if(~isempty(find(nearest_neighbor_matrix_mod2(i,:) == pair_id_set(i),1)))
+    if(~isempty(find(nearest_neighbor_matrix_mod2(sub_id_set(i),:) == pair_id_set(i),1)))
         idfn_task_recall_array_2(i) = 1;
     end
 end

@@ -1,4 +1,4 @@
-function plot_mean_recall_at_k(data_mat,x_array,cell_legend,leg_location,cell_label,save_plot_name)
+function plot_mean_recall_at_k(data_mat,x_array,figure_title,cell_legend,leg_location,cell_label,save_plot_name)
 
 
 %%
@@ -59,6 +59,8 @@ function plot_mean_recall_at_k(data_mat,x_array,cell_legend,leg_location,cell_la
     Num_curves = size(data_mat,1);
 
     h_fig = figure;
+    title(figure_title);
+    
     hold on;
     for i=1:Num_curves
         plot(x_array,data_mat(i,:),strcat('-',color_option{i},marker_option{i}),'LineWidth',Line_width,'MarkerSize',Marker_size);
@@ -71,7 +73,7 @@ function plot_mean_recall_at_k(data_mat,x_array,cell_legend,leg_location,cell_la
     set(leg_1,'FontSize',leg_FontSize);
    
     flag_y_lim = 0;  % adaptive mean recall value range for better visualization
-    if(flag_y_lim)
+    if(flag_y_lim==1)
         ylim([0 1]);
     end
     xlim([0 51]);
@@ -81,7 +83,7 @@ function plot_mean_recall_at_k(data_mat,x_array,cell_legend,leg_location,cell_la
     
     set(gca,'FontSize',gca_FontSize);
 
-    set(h_fig,'Position',[50,50,800,500]);
+    set(h_fig,'Position',[50,50,1000,625]);
 
     if(~isempty(save_plot_name))
         req_rez =1500;

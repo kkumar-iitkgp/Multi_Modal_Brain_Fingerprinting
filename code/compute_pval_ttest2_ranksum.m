@@ -39,13 +39,13 @@ if(length(data_array_1) == length(data_array_2))  % sample size matched
     temp_array_1 = data_array_1;
     temp_array_2 = data_array_2;
 elseif(length(data_array_1) > length(data_array_2))
-    rnd(rand_seed);
+    rng(rand_seed);
     temp_rand_perm_set = randperm(length(data_array_1),length(data_array_2));
     
     temp_array_1 = data_array_1(temp_rand_perm_set(:));
     temp_array_2 = data_array_2;
 else
-    rnd(rand_seed);
+    rng(rand_seed);
     temp_rand_perm_set = randperm(length(data_array_2),length(data_array_1));
     
     temp_array_1 = data_array_1;

@@ -30,6 +30,26 @@ function d_prime = compute_d_prime(data_array_1,data_array_2)
 %
 %%
 
-d_prime = (mean(data_array_1(:)) - mean(data_array_2(:)))/sqrt( ((std(data_array_1(:))).^2 + (std(data_array_1(:))).^2)/2);
+rand_seed = 1;
+
+if(length(data_array_1) == length(data_array_2))  % sample size matched
+    temp_array_1 = data_array_1;
+    temp_array_2 = data_array_2;
+elseif(length(data_array_1) > length(data_array_2))
+    rng(rand_seed);
+    temp_rand_perm_set = randperm(length(data_array_1),length(data_array_2));
+    
+    temp_array_1 = data_array_1(temp_rand_perm_set(:));
+    temp_array_2 = data_array_2;
+else
+    rng(rand_seed);
+    temp_rand_perm_set = randperm(length(data_array_2),length(data_array_1));
+    
+    temp_array_1 = data_array_1;
+    temp_array_2 = data_array_2(temp_rand_perm_set(:));
+end
+
+
+d_prime = (mean(temp_array_1(:)) - mean(temp_array_2(:)))/sqrt( ((std(temp_array_1(:))).^2 + (std(temp_array_2(:))).^2)/2);
  
 end
