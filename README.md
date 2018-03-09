@@ -1,6 +1,6 @@
 ## Multi_Modal_Brain_Fingerprinting
 
-The code in this repository reproduces most of the analysis reported in "Multi-modal brain fingerprinting: a manifold approximation based framework".
+The code in this repository reproduces most of the analysis reported in "Multi-modal brain fingerprinting: a manifold approximation based framework". See code/main_Demo_function.m and code/main_Demo_function.pdf for illustration.
 
 __________________________________________________________________
 ## Following analysis can be performed:
